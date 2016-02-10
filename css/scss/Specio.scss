@@ -1,0 +1,325 @@
+$nav-height:4em;
+$action-nav-width:40px;
+
+$nav-bgcolor:#ccc;
+
+$action-bar-bgcolor:#aaa;
+
+/*==========Global units==========*/
+
+main {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	padding:30px ($action-nav-width + 30px) 30px 30px;
+}
+
+.unit-holder {
+	display:none;
+}
+
+/*==========Nav units==========*/
+
+nav {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	background:$nav-bgcolor;
+
+	&.side {
+		
+	}
+
+	ul {
+		list-style:none;
+		height:100%;
+		padding:0;
+		margin:0;
+
+		li {
+			height:100%;
+			display:inline-block;
+			min-width:100px;
+			text-align:center;
+			padding:0 20px;
+			vertical-align:middle;
+			height:$nav-height;
+
+			&:hover {
+				background-color:#ddd;
+			}
+
+			a {
+				color:#000;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration:underline;
+				}
+			}
+		}
+	}
+}
+
+.close {
+	position:absolute;
+	top:5px;
+	right:5px;
+	cursor:pointer;
+	z-index:5001;
+}
+
+.action-nav{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	background-color:#aaa;
+
+	ul {
+		list-style: none;
+		padding:0;
+		margin:0;
+
+		li {
+			width:$action-nav-width;
+			height:$action-nav-width;
+			line-height:$action-nav-width;
+			font-size:1em;
+			text-align:center;
+			vertical-align: middle;
+			border-bottom:1px solid ($action-bar-bgcolor - #222);
+			
+			&:hover{
+				background-color:$action-bar-bgcolor + #222;
+			}
+		}
+	}
+}
+
+/*==========Panel units==========*/
+
+.panel {
+	position:fixed;
+	top:0;
+	bottom:0;
+	width:0;
+	background:#fff;
+	color:#000;
+	right:$action-nav-width;
+	max-width:80%;
+	/*display: none;*/
+	/*min-width:400px;*/
+	border-left:20px solid #ddd;
+	z-index:5000;
+
+	&.left {
+		
+	}
+
+	&-title {
+		font-size:1.3em;
+		font-weight:bold;
+	}
+}
+
+.panel--overlay {
+	background:rgba(0,0,0,0.49);
+	/*display: none;*/
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:4999;
+}
+
+.panel--close {
+	position:absolute;
+	top:10px;
+	right:10px;
+	display: block;
+	width:20px;
+	height:20px;
+	line-height: 20px;
+	cursor:pointer;
+	font-family:sans-serif;
+}
+
+/*==========Formbuilder units==========*/
+$section-handler-width:200px;
+
+#template-edit {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background:#fff;
+}
+
+.formbuilder {
+	margin-left:($section-handler-width+20px);
+	margin-right:$action-nav-width+20px;
+}
+
+.new-field-bar {
+	position:fixed;
+	left:$section-handler-width;
+	bottom:0;
+	right:0;
+	border-top:1px solid black;
+	white-space:nowrap;
+}
+
+.new-field {
+	width:120px;
+	height:100px;
+	margin:20px;
+	border:1px dotted black;
+	display: inline-block;
+	vertical-align:top;
+	position:relative;
+	padding:1em;
+	box-sizing:border-box;
+
+	& > * {
+		box-sizing:border-box;
+		padding:0;
+		width:100%;
+	}
+
+	&--handle {
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:20px;
+		height:20px;
+		background:#000;
+	}
+}
+
+.section-handler {
+	position:absolute;
+	top:0;
+	left:0;
+	width:$section-handler-width;
+	bottom:0;
+	background:#ccc;
+
+	&--section {
+		margin:0.5em 1em;
+		padding:1em;
+		width:calc(100% - 2em);
+		box-sizing:border-box;
+		border:1px solid black;
+		background:none;
+
+		&-add {
+			border-top:1px dotted black;
+			text-align:center;
+			padding:10px 0;
+		}
+	}
+}
+
+
+.section{
+	
+	fieldset {
+		margin:1em 0;
+		
+		& > .template-section-fields {
+			display:none;
+			min-height:100px;
+		}
+	}
+
+	legend {
+		width:100px;
+	}
+
+	ul {
+		width:960px;
+		padding:0;
+		margin:0;
+		list-style:none;
+	}
+
+	&.sectionSelected {
+		background-color:#666;
+		color:#fff;
+		& fieldset > .template-section-fields {
+			display:block;
+		}
+	}
+}
+
+
+
+.section-handler {
+	&-section {
+		min-height:40px;
+		&.sectionSelected {
+			background-color:#666;
+			color:#fff;
+		}
+	}
+}
+
+.field {
+	text-align:center;
+	&.divider {
+		width:100%;
+	}
+	input {
+		width:100%;
+		box-sizing:border-box;
+		background:#ddd;
+	}
+
+	&.two-wide {
+
+	}
+}
+
+.field,.widget{
+	background:#ccc;
+	padding:1em;
+	margin:5px;
+	width:calc(25% - 10px);
+	height:100%; 
+	display:inline-block;
+	box-sizing:border-box;
+}
+
+.widget {
+}
+
+
+/*==========Template Panel units==========*/
+.formbuilder-controls {
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	width:400px;
+	text-align: center;
+	background:#ddd;
+	padding:2em;
+}
+
+.formbuilder-controls {
+	
+	.formbuilder-addfield {
+
+		.field-preview {
+			border:2px dashed #333;
+			padding:2em;
+			margin:1em 0;
+		}
+	}
+}
