@@ -1,0 +1,37 @@
+.field-samples {
+	position:absolute;
+	left:250px;
+	right:0;
+	height:100px;
+	bottom:0;
+	background:#ccc;
+	padding:20px;
+	box-sizing:border-box;
+
+	.field-sample {
+		display:inline-block;
+		padding:0 20px 0 40px;
+		height:100%;
+		box-sizing:border-box;
+		min-width:40px;
+		text-align: center;
+		border:1px dashed #222;
+		background:#ccc;
+		position: relative;
+
+		&-handle {
+			position:absolute;
+			left:0;
+			top:0;
+			bottom:0;
+			width:20px;
+			background:#888;
+			cursor:move;
+		}
+
+		input[type="text"], select {
+			max-width:100%;
+			min-width:75px;
+		}
+	}
+}

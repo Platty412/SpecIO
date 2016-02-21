@@ -1,0 +1,22 @@
+.action-bar {
+	position:fixed;
+	top:0;
+	bottom:0;
+	right:0;
+	background:#fff;
+	color:#000;
+	width:30px;
+	/*display: none;*/
+	/*min-width:400px;*/
+	border-left:20px solid #ddd;
+	z-index:5000;
+
+	&.left {
+		
+	}
+
+	&-title {
+		font-size:1.3em;
+		font-weight:bold;
+	}
+}

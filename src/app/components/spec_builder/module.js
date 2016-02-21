@@ -1,0 +1,1 @@
+angular.module('specBuilder',['sectionList', 'builderLayoutModule', 'fieldSampleModule']);

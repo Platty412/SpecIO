@@ -1,0 +1,10 @@
+<div class="section-list">
+	<ul>
+		<li ng-repeat="section in sections" ng-click="selectSection(section)">
+			<span class='section-list-handle'></span>
+			<input type="text" ng-model="section.title" placeholder="[Title]" />
+			<span class="fa fa-close" ng-click="deleteSection(section)">X</span>
+		</li>
+	</ul>
+	<button type="button" class="add-section" ng-click="addSection()">Add Section</button>
+</div>

@@ -1,0 +1,31 @@
+{
+  "name": "SpecIO",
+  "description": "Specio temp project for front-end",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "angularjs",
+    "html",
+    "javascript"
+  ],
+  "authors": [
+    "Justin Cooper"
+  ],
+  "license": "MIT",
+  "homepage": "www.beefry.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "angularjs#^1.5.0",
+    "jquery-ui": "jqueryui#^1.11.4"
+  },
+  "dependencies": {
+    "gridstack-angular": "^0.3.0"
+  }
+}

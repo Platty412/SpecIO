@@ -1,0 +1,17 @@
+<div class="field-sample" id="field-sample-{{type}}">
+	<div class="field-sample-handle"></div>
+	<div ng-switch="type">
+		<div ng-switch-when="checkbox">
+			<div>Checkbox</div>
+			<input type='checkbox' disabled="disabled"/>
+		</div>
+		<div ng-switch-when="radio">
+			<div>Radio</div>
+			<input type='radio' disabled="disabled"/>
+		</div>
+		<div  ng-switch-when="list">
+			<div>List</div>
+			<select style="height:30px;" disabled="disabled"></select>
+		</div>
+	</div>
+</div>

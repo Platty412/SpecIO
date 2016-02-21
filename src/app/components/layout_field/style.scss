@@ -1,0 +1,29 @@
+.field {
+	text-align:center;
+
+	&.divider {
+		width:100%;
+	}
+	input {
+		width:100%;
+		box-sizing:border-box;
+		background:#ddd;
+	}
+
+	&.two-wide {
+
+	}
+}
+
+.field,.widget{
+	background:#ccc;
+	padding:1em;
+	margin:5px;
+	width:calc(25% - 10px);
+	height:100%; 
+	display:inline-block;
+	box-sizing:border-box;
+}
+
+.widget {
+}
