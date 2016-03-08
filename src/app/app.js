@@ -1,4 +1,4 @@
 var baseTemplateDir = "templates/";
 
 
-angular.module('specio',['actionBar','specBuilder']);
+angular.module('specio',['actionBar','specBuilder','panelManagerModule']);

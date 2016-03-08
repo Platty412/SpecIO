@@ -1,0 +1,8 @@
+<div class='panel-manager' ng-show="currentPanel !== null">
+	<div class="panel-overlay" ng-click="closePanel()"></div>
+	<div class='panel'>
+		<div class='panel-title'>{{currentPanel.readableName}}</div>
+		<div class="panel-close" ng-click="closePanel()"><i class='fa fa-close'></i></div>
+		<div ng-include="currentPanel.templateUrl"></div>
+	</div>
+</div>

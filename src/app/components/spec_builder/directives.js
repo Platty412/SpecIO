@@ -3,7 +3,7 @@ angular.module('specBuilder')
 		return {
 			restrict:'EA',
 			// require:'^specio',
-			controller: ['$scope', function($scope) {
+			controller: ['$scope','panelManagerService', function($scope, panelManager) {
 				$scope.template = new Template();
 				$scope.value = "This";
 
@@ -22,6 +22,9 @@ angular.module('specBuilder')
 					}
 				];
 
+				panelManager.registerPanel('sectionEditor', 'Edit Section', 'sectionEditPanel.html');
+				panelManager.registerPanel('fieldEditor', 'Edit Field', 'fieldEditPanel.html');
+
 				$scope.$on("specio.section-add", function(event, args) {
 					
 					event.stopPropagation();
@@ -32,6 +35,8 @@ angular.module('specBuilder')
 					$scope.template.selectSection(newSection);
 
 					$scope.$broadcast("specio.section--selected", newSection);
+
+					panelManager.setPanel('sectionEditor', newSection, 'section');
 				});
 
 				$scope.$on("specio.section-delete", function(event, section) {
@@ -47,8 +52,6 @@ angular.module('specBuilder')
 					if(fieldtype) {
 						var newField = new Field(section, fieldtype);
 						section.fields.push(newField);
-						// var grid = $('.gridstack').data("gridstack");
-						// grid.addWidget("<div class='field grid-stack-item-content'>Test</div>", 0,0,1,1, true);
 						$scope.$apply();
 					}
 				});

@@ -1,7 +1,7 @@
 angular.module('layoutFieldModule')
 	.directive('layoutField', function() {
 		return {
-			templateUrl: baseTemplateDir + 'template.html',
+			templateUrl: baseTemplateDir + 'layoutField.html',
 			replace:true,
 			scope:{
 				field:"="

@@ -66,5 +66,5 @@ gulp.task('connect', function() {
 gulp.task('default', ['connect'],function(){
 	gulp.watch('index.html', ['transfer', 'sass']);
 	gulp.watch(['app/**/*.js', 'app/**/*.html'], ['app']);
-	gulp.watch(['app/**/*.scss', 'css/scss/Specio.scss'], ['sass']);
+	gulp.watch(['app/**/*.scss', 'css/scss/*.scss'], ['sass']);
 });

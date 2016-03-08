@@ -1,1 +1,1 @@
-angular.module('specBuilder',['sectionList', 'builderLayoutModule', 'fieldSampleModule']);
+angular.module('specBuilder',['sectionList', 'builderLayoutModule', 'fieldSampleModule', 'panelManagerModule']);

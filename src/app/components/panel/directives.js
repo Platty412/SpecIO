@@ -2,9 +2,11 @@ angular.module('sectionPanelModule')
 	.directive('sectionPanel', function(){
 		return {
 			restrict:"E",
+			transclude:true,
+			replace:true,
 			link:function(scope, element, thing) {
 
 			},
-			templateUrl: baseTemplateDir + 'replaceThis.html'
+			templateUrl: baseTemplateDir + 'panel.html'
 		};
 	});

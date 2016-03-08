@@ -26,6 +26,7 @@
     "jquery-ui": "jqueryui#^1.11.4"
   },
   "dependencies": {
-    "gridstack-angular": "^0.3.0"
+    "gridstack-angular": "^0.3.0",
+    "jquery": "^2.2.0"
   }
 }

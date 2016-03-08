@@ -4,7 +4,7 @@ angular.module('sectionList')
 			require:'^specBuilder',
 			restrict:'EA',
 			templateUrl: baseTemplateDir + 'sectionList.html',
-			controller: ['$scope', function($scope){
+			controller: ['$scope', 'panelManagerService', function($scope, panelManager){
 
 				$scope.addSection = function() {
 					$scope.$emit("specio.section-add");
@@ -12,6 +12,7 @@ angular.module('sectionList')
 
 				$scope.selectSection = function(section) {
 					$scope.$emit("specio.section-selected");
+					panelManager.setPanel('sectionEditor', section, 'section');
 				}
 
 				$scope.deleteSection = function(section) {
